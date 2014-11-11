@@ -1,0 +1,66 @@
+<div class="container formimg">
+  <div class="row first-row">
+    <div class="col-md-12 col-lg-12">
+      <a href="/account/facebook/login/" class="btn-facebook">Hace tu reserva</a></p>
+    </div>
+  </div>
+  <%= form_tag("/appointments", :method => "post") do %>
+    <div class="row">
+        <div class="col-md-4 col-lg-4">
+            <input type="text" id="datepicker" placeholder:"Fecha">
+        </div>
+        <div class="col-md-3 col-lg-3">
+            <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                    Hora
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">07:00 AM</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">08:00 AM</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">09:00 AM</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">10:00 AM</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">11:00 AM</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">12:00 AM</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">01:00 PM</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">02:00 PM</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">03:00 PM</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">04:00 PM</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">05:00 PM</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">06:00 PM</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">07:00 PM</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">08:00 PM</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">09:00 PM</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">10:00 PM</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">11:00 PM</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">12:00 PM</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-3 col-lg-3">
+            <div class="dropdown">
+              <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                Cancha
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">El campito</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Ibiza</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Estadio</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Nahuel</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Villa Vatteone</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Set</a></li>
+                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Varela jr</a></li>
+              </ul>
+            </div>
+        </div>
+        <div class="col-md-2 col-lg-2">
+            <button type="submit" class="btn btn-default btn-success">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </div>
+    </div>
+  <% end %>
+</div>
+
+<%= javascript_include_tag "appointment.js" %>

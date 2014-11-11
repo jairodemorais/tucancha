@@ -1,0 +1,33 @@
+<div class="container formimg">
+  <div class="row first-row">
+    <div class="col-md-12 col-lg-12">
+      <a href="/account/facebook/login/" class="btn-facebook">Entra con Facebook</a></p>
+    </div>
+  </div>
+  <div>
+    <%= image_tag "o.png", width: "354px" %>
+  </div>
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="row">
+      <div class="col-md-12 col-lg-12">
+         <%= f.email_field :email, autofocus: true, placeholder: "Escribe tu email", class: "form-control" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-lg-12">
+        <%= f.password_field :password, autocomplete: "off", placeholder: "Escribe tu contraseña", class: "form-control" %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-lg-12">
+        <%= f.submit "Ingresa", class: "btn btn-success" %>
+        <input type="buttom" class="btn btn-success" value="registrate">
+      </div>
+    </div>
+  <% end %>
+  <div class="row">
+    <div class="col-md-12 col-lg-12">
+      <a href="/account/password/reset/"> ¿Has olvidado tu contraseña? </a>
+    </div>
+  </div>
+</div>
