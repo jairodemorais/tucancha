@@ -9,10 +9,13 @@ $( document ).ready(function() {
     dateFormat: 'dd/mm/yy',
     onSelect: function(dateText) {
       setFinalDate = dateText;
+      $('input[name=date]').val(dateText);
     }
   });
 
   $(".dropdown-menu li a").click(function(){
+    var id = $(this).parents(".dropdown").find(".btn")[0].id;
+    $('input[name='+id+']').val($(this).text());
     $(this).parents(".dropdown").find(".btn").text($(this).text());
     $(this).parents(".dropdown").find(".btn").val($(this).text());
   });
@@ -45,7 +48,7 @@ function findHours(chosen_date){
       success: function(html){
         var hours_array = [];
         $("#hidden_hour_div").append(html);
-        var hours_string = $("#hidden_hour_div").html()
+        var hours_string = $("#hidden_hour_div").html();
         var one = hours_string.substring(2, 6);
         var two = hours_string.substring(10, 14);
         var three = hours_string.substring(18, 22);
@@ -69,7 +72,7 @@ function findHours(chosen_date){
         document.getElementById('appointments_date').value = setFinalDate;
         document.getElementById('appointments_hour').value = hour;
         $('#cal_previous2').show();
-        document.getElementById('subData').style.display = 'block'
+        document.getElementById('subData').style.display = 'block';
         $('#final_date h2').append(setFinalDate);
         $('#final_hour h2').append(id);
         pageNo = '3';
