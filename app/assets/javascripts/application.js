@@ -18,3 +18,5 @@
 //= require bootstrap.min
 //= require jquery
 //= require jquery_ujs
+//= require typeahead.bundle
+//= require jquery-ui-timepicker-addon

@@ -10,9 +10,10 @@
  *
  *= require_self
  *= require_tree .
+ *= require style
  *= require bootstrap.min
  *= require jquery.ui.all
- *= require style
+ *= require jquery-ui-timepicker-addon
  */
 
  @font-face {

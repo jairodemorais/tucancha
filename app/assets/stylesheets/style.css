@@ -4,31 +4,34 @@ html, body {
 
 /* menu header */
 
-.navbar-inverse {
+body div.navbar-inverse {
   background-color: #43894e;
-  border:none;
+  border-color: #58b957;
+  margin: 0;
+  padding: 0;
+
 }
-.navbar-inverse .navbar-nav>li>a {
+body div.navbar-inverse .navbar-nav>li>a {
   color: #ffffff;
 }
-.navbar-inverse .navbar-nav>li>a:hover,
+body div.navbar-inverse .navbar-nav>li>a:hover,
 nav>li>a:focus {
   background-color: #347542;
 }
 
-.navbar>.container .navbar-brand,
+body div.navbar>.container .navbar-brand,
 .navbar>.container-fluid .navbar-brand {
   color: #ffffff;
 }
-.navbar-inverse .navbar-nav>.active>ul>li>a,
-.navbar-inverse .navbar-nav>.active>ul>li>a:hover,
-.navbar-inverse .navbar-nav>.active>ul>li>a:focus {
+body div.navbar-inverse .navbar-nav>.active>ul>li>a,
+body div.navbar-inverse .navbar-nav>.active>ul>li>a:hover,
+body div.navbar-inverse .navbar-nav>.active>ul>li>a:focus {
   background-color: #58b957;
 }
 
-.navbar-inverse .navbar-nav>.active>a,
-.navbar-inverse .navbar-nav>.active>a:hover,
-.navbar-inverse .navbar-nav>.active>a:focus{
+body div.navbar-inverse .navbar-nav>.active>a,
+body div.navbar-inverse .navbar-nav>.active>a:hover,
+body div.navbar-inverse .navbar-nav>.active>a:focus{
   background-color: #58b957;
 }
 
@@ -52,7 +55,6 @@ ul{ text-align: center;
 .navbar-inverse .navbar-header button:focus {
   border: none;
   background-color: transparent;
-  font-size: 2em;
   margin-bottom: 0;
 
 }
@@ -71,20 +73,135 @@ ul{ text-align: center;
   width: 100%;
   background-color: rgba(67, 137, 78, 0.9);
 }
-.navbar-nav>li>a {
+.footer>ul{
+  list-style-type: none;
+  padding-top: 0.4em;
+}
+.footer>ul>li {
+  display: inline-block;
+}
+.footer>ul>li>a {
   color: #ffffff;
+  margin: 0 1em;
+
+
 }
 .nav>li>a:hover,
 nav>li>a:focus {
   background-color: #347542;
 }
 
+/* Scrollable Dropdown Canchas */
+
+#canchas .tt-dropdown-menu {
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.typeahead,
+.tt-query,
+.tt-hint {
+  width: 100%;
+  height: 35px;
+  padding: 8px 8px;
+  font-size: 1em;
+  line-height: 30px;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  outline: none;
+  text-align: center;
+
+}
+
+.typeahead {
+  background-color: #fff;
+}
+
+.typeahead:focus {
+  border: 2px solid green;
+}
+
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+  color: #58b957;
+}
+
+.tt-dropdown-menu {
+  width: 320px;
+  margin-top: 12px;
+  padding: 8px 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 8px;
+     -moz-border-radius: 8px;
+          border-radius: 8px;
+  -webkit-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 5px 10px rgba(0,0,0,.2);
+          box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.tt-suggestion {
+  padding: 3px 20px;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.tt-suggestion.tt-cursor {
+  color: #fff;
+  background-color: #58b957;
+
+}
+
+.tt-suggestion p {
+  margin: 0;
+}
+
+.gist {
+  font-size: 14px;
+}
+/* Icono de la cancha a la derecha */
+/* enable absolute positioning */
+
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .icon-cancha {
+  position: absolute;
+  padding: 4px;
+  padding-right: 8px;
+  pointer-events: none;
+  z-index: 1;
+
+}
+
+/* align icon */
+.left-addon .icon-cancha { left:  0px;}
+.right-addon .icon-cancha { right: 0px;}
+
+/* add padding  */
+.left-addon input  { padding-left:  30px; }
+.right-addon input { padding-right: 30px; }
 
 /* fondo cesped */
 
 body {
   background: url("cesped2.jpg") no-repeat left center fixed;
-  -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow-y:hidden!important;
+  overflow-x:hidden!important;
 }
 #background {
     width: 1440px;
@@ -106,7 +223,7 @@ body {
   text-transform: none;
   line-height: 1;
   color: #ffffff;
-  font-size: 1.3em;
+  font-size: 2em;
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
@@ -129,32 +246,34 @@ body>div.container {
   text-align: center;
 }
 
+.icon-cancha {
+  color: #58b957;
+}
 
 .formimg {
   background: url('pelota.png') no-repeat fixed center;
-  background-size: 30em;
+  background-size: 280px;
+  padding-top: 2em;
 }
 
 
 body>.container {
-  width: 30em;
+  width: 320px;
   height: 30em;
   position: absolute;
   left: 50%;
   top:50%;
-  margin-left: -15em;
-  margin-top: -15em;
+  margin-left: -160px;
+  margin-top: -160px;
 }
 
-.container .first-row {
-  margin-top: 4em;
-}
+
 .row {
   padding-top: 1em;
 }
 
 .btn {
-  width: 100px;
+  width: 90px;
 }
 
 
@@ -168,11 +287,67 @@ h1 {
   color: #FFFFFF;
 }
 
-input#datepicker {
-  width: 100%;
+/* datepicker */
+
+#ui-datepicker-div .ui-state-default, 
+#ui-datepicker-div .ui-widget-content .ui-state-default, 
+#ui-datepicker-div .ui-widget-header .ui-state-default {
+  background: #58b957;
+  border-radius: 4px;
+}
+
+#ui-datepicker-div .ui-state-default {
+  color: #FFFFFF;
+  text-align: center;
+}
+
+#ui-datepicker-div .ui-widget-header {
+  background: #58b957;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+#ui-datepicker-div .ui-widget-header a {
+  background: #58b957;
+}
+
+#datepicker {
+  height: 34px;
+  font-size: 12px;
+  line-height: 1.2em;
+  text-align: center;
+}
+
+input {
+    border: 1px solid #ccc;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
 }
 
 
+/* btn search */
 
+#search-btn {
+  width: 40px;
+}
 
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active, 
+.open>.dropdown-toggle.btn-success {
+  background-color: #43894e;
+}
+
+.twitter-typeahead {
+  width: 100%;
+}
+
+/* hora desplegable */
+
+#time-menu {
+  height: 140px;
+  overflow: scroll;
+}
 
