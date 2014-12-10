@@ -13,7 +13,6 @@
  *= require style
  *= require bootstrap.min
  *= require jquery.ui.all
- *= require jquery-ui-timepicker-addon
  */
 
  @font-face {

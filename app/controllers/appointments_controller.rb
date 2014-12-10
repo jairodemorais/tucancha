@@ -14,19 +14,13 @@ class AppointmentsController < ApplicationController
     end
   end
 
+  def search
+    @appointments = Appointment
 
-  def create
-    puts ""
-    @appointment = Appointment.create(date: params["date"], hour: params["time"], place: params["place"])
-    if @appointment.save
-      redirect_to new_appointment_path
-    else
-      err = ''
-      @appointment.errors.full_messages.each do |m|
-        err << m
-      end
-    end
+    @appointments = @appointments.where(date: params["date"]) if params["date"]
+    @appointments = @appointments.where(hour: params["time"]) if params["time"]
+    @appointments = @appointments.where(place: params["place"]) if params["place"]
 
-    redirect_to new_appointment_path, :flash => { :alert => "#{err}, please try again" }
+    redirect_to appointments_path, :flash => { :alert => "#{err}, please try again" }
   end
 end

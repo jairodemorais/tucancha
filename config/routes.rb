@@ -8,6 +8,8 @@ Footbal::Application.routes.draw do
   # root 'welcome#index'
   root 'appointments#new'
 
+  post 'appointments/search' => 'appointments#search', as: :search
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -4,22 +4,20 @@
       <h3>Hace tu reserva</h3>
     </div>
   </div>
-  <%= form_for @appointment, :url => { :action => "create" }  do |f|  %>
-    <input class="span2" name="date" type="hidden" />
+  <%= form_for @appointment, :url => { :action => "search" }  do |f|  %>
     <input class="span2" name="hour" type="hidden" />
-    <input class="span2" name="place" type="hidden" />
 
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div id="canchas" class="inner-addon right-addon">
           <i class="icon-cancha"></i>
-          <input class="typeahead" type="text" placeholder="Elegí tu cancha">
+          <input class="typeahead" type="text" name="place" placeholder="Elegí tu cancha">
         </div>
       </div>
     </div>
     <div class="row">
       <div class="form-group col-xs-4 col-sm-4 col-md-4 col-lg-4">
-        <input type="text" id="datepicker" placeholder="Fecha" class="form-control">
+        <input type="text" id="datepicker" placeholder="Fecha" name="date" class="form-control">
       </div>
 
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
@@ -50,7 +48,7 @@
               </ul>
           </div>
       </div>
-      
+
       <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <button id="search-btn" type="submit" class="btn btn-success form-control pull-right">
           <span class="glyphicon glyphicon-search"></span>
