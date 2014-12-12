@@ -93,6 +93,8 @@ nav>li>a:focus {
 
 /* Scrollable Dropdown Canchas */
 
+
+
 #canchas .tt-dropdown-menu {
   max-height: 150px;
   overflow-y: auto;
@@ -242,7 +244,6 @@ padding: 0;
 }
 
 body>div.container {
-  height: 100%;
   text-align: center;
 }
 
@@ -252,19 +253,20 @@ body>div.container {
 
 .formimg {
   background: url('pelota.png') no-repeat fixed center;
-  background-size: 280px;
+  background-size: 500px;
   padding-top: 2em;
 }
 
 
 body>.container {
-  width: 320px;
-  height: 30em;
+  width: 100%;
+  height: 500px;
   position: absolute;
   left: 50%;
-  top:50%;
-  margin-left: -160px;
-  margin-top: -160px;
+  top: 50%;
+  margin-left: -50%;
+  margin-top: -250px;
+  padding-top: 6em;
 }
 
 
@@ -273,7 +275,7 @@ body>.container {
 }
 
 .btn {
-  width: 90px;
+  width: 100%;
 }
 
 
@@ -309,10 +311,11 @@ h1 {
 
 #ui-datepicker-div .ui-widget-header a {
   background: #58b957;
-}
+}11212
 
 #datepicker {
   height: 34px;
+  width: 120px;
   font-size: 12px;
   line-height: 1.2em;
   text-align: center;
@@ -325,6 +328,18 @@ input {
           border-radius: 5px;
 }
 
+@font-face {
+    font-family: 'bpdotssquaresregular';
+    src: url('bpdotssquare-webfont.eot');
+    src: url('bpdotssquare-webfont.eot?#iefix') format('embedded-opentype'),
+         url('bpdotssquare-webfont.woff2') format('woff2'),
+         url('bpdotssquare-webfont.woff') format('woff'),
+         url('bpdotssquare-webfont.ttf') format('truetype'),
+         url('bpdotssquare-webfont.svg#bpdotssquaresregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 /* btn search */
 
@@ -351,3 +366,28 @@ input {
   overflow: scroll;
 }
 
+/* tablero */
+
+#tablero {
+  height: 100%;
+  width: 100%;
+  font-family: "bpdotssquaresregular","arial", "sanserif";
+  font-size: 20px;
+  margin-top: 60px;
+}
+
+.tablero {
+  background: url('tablero.png') no-repeat fixed center;
+  background-size: 380px;
+  padding-top: 2em;
+  text-align: center;
+}
+
+.menu {
+  padding-left: 0px;
+} 
+
+.flag {
+  font-family: sans-serif;
+  color: green;
+}
