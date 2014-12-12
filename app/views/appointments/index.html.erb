@@ -1,18 +1,12 @@
-<div id="tablero" class="tablero"> 
-	<p>El Campito</p>
+<div id="tablero" class="tablero">
+	<p><%=@place%> - <%=@date%> </p>
 	<ul class="menu" role="menu" aria-labelledby="dropdownMenu1">
-	    <li role="presentation" class="inner-addon right-addon">
-	      <a role="menuitem" tabindex="-1" href="#">01-02-15  07:00 hs</a>
+		<% @free_hours.each do |h| %>
+		  <li role="presentation" class="inner-addon right-addon">
+	      <a role="menuitem" tabindex="-1" href="#"><%=h%>:00hs</a>
 	      <a class="btn flag">Reservá <i class="glyphicon glyphicon-flag"></i></a>
 	    </li>
-	    <li role="presentation" class="inner-addon right-addon">
-	      <a role="menuitem" tabindex="-1" href="#">01-02-15  09:00 hs</a>
-	      <a class="btn flag">Reservá <i class="glyphicon glyphicon-flag"></i></a>
-	    </li>
-	    <li role="presentation" class="inner-addon right-addon">
-	      <a role="menuitem" tabindex="-1" href="#">01-02-15  13:00 hs</a>
-	      <a class="btn flag">Reservá <i class="glyphicon glyphicon-flag"></i></a>
-	    </li>
+		<% end %>
 	</ul>
 
 </div>

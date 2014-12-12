@@ -172,8 +172,8 @@ nav>li>a:focus {
 /* Icono de la cancha a la derecha */
 /* enable absolute positioning */
 
-.inner-addon { 
-    position: relative; 
+.inner-addon {
+    position: relative;
 }
 
 /* style icon */
@@ -274,7 +274,7 @@ body>.container {
   padding-top: 1em;
 }
 
-.btn {
+.formimg .btn {
   width: 100%;
 }
 
@@ -291,8 +291,8 @@ h1 {
 
 /* datepicker */
 
-#ui-datepicker-div .ui-state-default, 
-#ui-datepicker-div .ui-widget-content .ui-state-default, 
+#ui-datepicker-div .ui-state-default,
+#ui-datepicker-div .ui-widget-content .ui-state-default,
 #ui-datepicker-div .ui-widget-header .ui-state-default {
   background: #58b957;
   border-radius: 4px;
@@ -350,7 +350,7 @@ input {
 .btn-success:hover,
 .btn-success:focus,
 .btn-success:active,
-.btn-success.active, 
+.btn-success.active,
 .open>.dropdown-toggle.btn-success {
   background-color: #43894e;
 }
@@ -385,7 +385,7 @@ input {
 
 .menu {
   padding-left: 0px;
-} 
+}
 
 .flag {
   font-family: sans-serif;
